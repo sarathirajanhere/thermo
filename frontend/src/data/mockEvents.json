@@ -1,0 +1,74 @@
+[
+  {
+    "event_id": "TG-IND-0247",
+    "timestamp": "2026-09-07T10:30:00Z",
+    "latitude": 13.0827,
+    "longitude": 80.2707,
+    "sensor": "VIIRS",
+    "confidence": 0.94,
+    "frp": 68.2,
+    "source_class": "Potential Industrial Fire",
+    "class_confidence": 0.93,
+    "context_type": "Industrial Facility",
+    "facility_id": "FAC-001",
+    "facility_name": "Manali Petrochemicals Complex",
+    "baseline_value": 18.0,
+    "current_value": 68.2,
+    "anomaly_score": 0.88,
+    "severity": "CRITICAL",
+    "status": "INVESTIGATING",
+    "evidence": [
+      "Inside industrial facility boundary (OSM match)",
+      "FRP is 278% above facility baseline (18.0 MW vs 68.2 MW)",
+      "Unusual spatial spread outside designated flare stack"
+    ]
+  },
+  {
+    "event_id": "TG-IND-0104",
+    "timestamp": "2026-09-07T09:15:00Z",
+    "latitude": 13.1100,
+    "longitude": 80.2900,
+    "sensor": "MODIS",
+    "confidence": 0.88,
+    "frp": 16.5,
+    "source_class": "Routine Gas Flare",
+    "class_confidence": 0.96,
+    "context_type": "Industrial Facility",
+    "facility_id": "FAC-002",
+    "facility_name": "CPCL Refinery Flare Stack",
+    "baseline_value": 17.5,
+    "current_value": 16.5,
+    "anomaly_score": 0.08,
+    "severity": "LOW",
+    "status": "NORMAL",
+    "evidence": [
+      "Coordinates align with designated flare stack tower",
+      "Thermal intensity within 30-day baseline envelope",
+      "No anomalous perimeter expansion detected"
+    ]
+  },
+  {
+    "event_id": "TG-AGR-0052",
+    "timestamp": "2026-09-07T08:40:00Z",
+    "latitude": 13.0200,
+    "longitude": 80.1900,
+    "sensor": "VIIRS",
+    "confidence": 0.82,
+    "frp": 9.4,
+    "source_class": "Crop Residue Burning",
+    "class_confidence": 0.89,
+    "context_type": "Agricultural Land",
+    "facility_id": null,
+    "facility_name": "Rural Perimeter Zone",
+    "baseline_value": 0.0,
+    "current_value": 9.4,
+    "anomaly_score": 0.15,
+    "severity": "MODERATE",
+    "status": "NEW",
+    "evidence": [
+      "Outside industrial perimeter (OSM landuse: farmland)",
+      "Seasonal crop cycle signature detected",
+      "Low spatial persistence"
+    ]
+  }
+]
