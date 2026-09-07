@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "description": "Deterministic golden-seed dataset for ThermoGuard AI / LandslideGuard demos. These fixtures are hand-picked to be edge-case-proof and require no external API calls -- the demo must run identically every time regardless of network conditions.",
+  "scenarios": [
+    {
+      "scenario_id": "SCN-A-BASELINE",
+      "scenario_label": "Normal / Baseline",
+      "description": "Routine, well-understood gas flare operating within its expected historical range. Should never escalate past LOW severity.",
+      "event": {
+        "event_id": "TG-DEMO-0001",
+        "timestamp": "2026-09-07T06:15:00Z",
+        "latitude": 12.5030,
+        "longitude": 78.7040,
+        "sensor": "VIIRS",
+        "confidence": 0.86,
+        "frp": 9.2,
+        "source_class": "Gas Flare",
+        "class_confidence": 0.90,
+        "context_type": "Industrial Facility",
+        "facility_id": "FAC-002",
+        "facility_name": "Riverside Gas Flare Station",
+        "baseline_value": 8.5,
+        "current_value": 9.2,
+        "anomaly_score": 0.08,
+        "severity": "LOW",
+        "status": "ACKNOWLEDGED",
+        "evidence": [
+          "Inside Industrial Facility boundary (Riverside Gas Flare Station)",
+          "Thermal intensity within 10% of facility baseline",
+          "Matches known continuous-flare signature"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-B-CRITICAL",
+      "scenario_label": "Critical Anomaly",
+      "description": "Abnormal industrial thermal spike, more than double the facility's historical baseline, inside a chemical plant boundary. This is the 'killer demo' escalation event.",
+      "event": {
+        "event_id": "TG-DEMO-0002",
+        "timestamp": "2026-09-07T10:30:00Z",
+        "latitude": 12.3456,
+        "longitude": 78.9012,
+        "sensor": "VIIRS",
+        "confidence": 0.91,
+        "frp": 42.5,
+        "source_class": "Potential Industrial Fire",
+        "class_confidence": 0.93,
+        "context_type": "Industrial Facility",
+        "facility_id": "FAC-001",
+        "facility_name": "Demo Chemical Plant",
+        "baseline_value": 18.0,
+        "current_value": 42.5,
+        "anomaly_score": 0.88,
+        "severity": "CRITICAL",
+        "status": "INVESTIGATING",
+        "evidence": [
+          "Inside Industrial Facility boundary (Demo Chemical Plant)",
+          "Thermal intensity 136% above facility baseline",
+          "Unexpected spatial pattern relative to known flare stacks"
+        ]
+      }
+    },
+    {
+      "scenario_id": "SCN-C-FALSE-ALARM",
+      "scenario_label": "False Alarm / Non-Target Context",
+      "description": "Low-intensity thermal signal over a known agricultural belt during typical crop-burning season. Correctly de-prioritized rather than treated as an industrial event.",
+      "event": {
+        "event_id": "TG-DEMO-0003",
+        "timestamp": "2026-09-07T04:45:00Z",
+        "latitude": 15.8210,
+        "longitude": 78.0260,
+        "sensor": "VIIRS",
+        "confidence": 0.72,
+        "frp": 4.1,
+        "source_class": "Crop Burning",
+        "class_confidence": 0.81,
+        "context_type": "Agricultural Land",
+        "facility_id": "REG-CROP-01",
+        "facility_name": "Kurnool Agricultural Belt",
+        "baseline_value": 3.8,
+        "current_value": 4.1,
+        "anomaly_score": 0.05,
+        "severity": "LOW",
+        "status": "RESOLVED",
+        "evidence": [
+          "Inside Agricultural Land region boundary (Kurnool Agricultural Belt)",
+          "Low FRP consistent with seasonal crop burning",
+          "No nearby industrial facility within 25 km"
+        ]
+      }
+    }
+  ]
+}
