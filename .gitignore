@@ -1,2 +1,13 @@
+<<<<<<< HEAD
 __pycache__/ 
 .pytest_cache/ 
+=======
+__pycache__/
+*.pyc
+venv/
+.venv/
+*.egg-info/
+.env
+.vscode/
+.idea/
+>>>>>>> c8820a80f8e97fcbe1ee32452a21651d4d9d9cc9

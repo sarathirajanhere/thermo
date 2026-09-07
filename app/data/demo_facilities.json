@@ -1,0 +1,26 @@
+[
+  {
+    "facility_id": "FAC-001",
+    "facility_name": "Demo Chemical Plant",
+    "facility_type": "Industrial Facility",
+    "latitude": 12.3456,
+    "longitude": 78.9012,
+    "baseline_value": 18.0
+  },
+  {
+    "facility_id": "FAC-002",
+    "facility_name": "Demo Gas Flare Station",
+    "facility_type": "Industrial Facility",
+    "latitude": 13.0827,
+    "longitude": 80.2707,
+    "baseline_value": 25.0
+  },
+  {
+    "facility_id": "FAC-003",
+    "facility_name": "Open Agricultural Land (Non-Industrial)",
+    "facility_type": "Non-Industrial",
+    "latitude": 21.1458,
+    "longitude": 79.0882,
+    "baseline_value": 5.0
+  }
+]
