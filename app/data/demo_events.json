@@ -1,0 +1,74 @@
+[
+  {
+    "event_id": "TG-IND-0001",
+    "timestamp": "2026-09-07T02:15:00Z",
+    "latitude": 13.0827,
+    "longitude": 80.2707,
+    "sensor": "VIIRS",
+    "confidence": 0.82,
+    "frp": 26.0,
+    "source_class": "Gas Flare",
+    "class_confidence": 0.9,
+    "context_type": "Industrial Facility",
+    "facility_id": "FAC-002",
+    "facility_name": "Demo Gas Flare Station",
+    "baseline_value": 25.0,
+    "current_value": 26.0,
+    "anomaly_score": 0.08,
+    "severity": "LOW",
+    "status": "NEW",
+    "evidence": [
+      "Inside industrial facility boundary",
+      "Thermal intensity consistent with recurring flare pattern",
+      "No significant deviation from baseline"
+    ]
+  },
+  {
+    "event_id": "TG-IND-0247",
+    "timestamp": "2026-09-07T10:30:00Z",
+    "latitude": 12.3456,
+    "longitude": 78.9012,
+    "sensor": "VIIRS",
+    "confidence": 0.91,
+    "frp": 42.5,
+    "source_class": "Potential Industrial Fire",
+    "class_confidence": 0.93,
+    "context_type": "Industrial Facility",
+    "facility_id": "FAC-001",
+    "facility_name": "Demo Chemical Plant",
+    "baseline_value": 18.0,
+    "current_value": 42.5,
+    "anomaly_score": 0.88,
+    "severity": "CRITICAL",
+    "status": "ACKNOWLEDGED",
+    "evidence": [
+      "Inside industrial facility boundary",
+      "Thermal intensity above facility baseline",
+      "Unexpected spatial pattern"
+    ]
+  },
+  {
+    "event_id": "TG-NON-0512",
+    "timestamp": "2026-09-07T06:45:00Z",
+    "latitude": 21.1458,
+    "longitude": 79.0882,
+    "sensor": "MODIS",
+    "confidence": 0.74,
+    "frp": 9.2,
+    "source_class": "Crop/Forest Burning",
+    "class_confidence": 0.81,
+    "context_type": "Non-Industrial",
+    "facility_id": "FAC-003",
+    "facility_name": "Open Agricultural Land (Non-Industrial)",
+    "baseline_value": 5.0,
+    "current_value": 9.2,
+    "anomaly_score": 0.35,
+    "severity": "MODERATE",
+    "status": "NEW",
+    "evidence": [
+      "Outside industrial facility boundary",
+      "Consistent with seasonal agricultural burning pattern",
+      "Moderate thermal intensity"
+    ]
+  }
+]
